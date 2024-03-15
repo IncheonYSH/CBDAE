@@ -25,9 +25,9 @@ With the widespread use of data science, there have been many attempts to apply 
 Therefore, it is necessary to recover accurate observations by solely analyzing corrupted data while taking into account the **underlying physical processes**.
 
 The main idea behind CBDAE (Contrastive Blind Denoising Autoencoder) is to introduce **contrast loss** into time series data.
-$$
-L = L_{AE} + \beta L_{NCE}
-$$
+
+![loss_function](README/loss_function.PNG)
+
 The purpose of this project is to implement the CBDAE introduced in the paper and enable experimentation on a variety of datasets.
 
 ## Pytorch version
