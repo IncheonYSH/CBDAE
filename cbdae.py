@@ -125,7 +125,7 @@ class HardNegativeSelector(DataLoader):
 
 class CBDAE(nn.Module):
     """
-    A PyTorch Module for a Constrastive Blind Denoising Auto Encoder (CBDAE).
+    A PyTorch Module for a Contrastive Blind Denoising Auto Encoder (CBDAE).
 
     Attributes:
         N : int
@@ -177,7 +177,7 @@ class CBDAE(nn.Module):
         x = x.float().to(device)
 
         # Commonly used zero tensor
-        # h1(0) is zeroes: https://arxiv.org/pdf/1406.1078.pdf
+        # h1(0) is zeros: https://arxiv.org/pdf/1406.1078.pdf
         zeros = torch.zeros(B, self.hidden_size, dtype=x.dtype).to(device)
 
         # Encoder
@@ -219,7 +219,7 @@ class CBDAE(nn.Module):
                     y_input = x[:, j - 1, :]
 
             else:
-                # y(0) for first layer's input is zeroes: https://arxiv.org/pdf/1406.1078.pdf
+                # y(0) for first layer's input is zeros: https://arxiv.org/pdf/1406.1078.pdf
                 y_input = torch.zeros(B, N).to(device)
 
             # Loop through each layer in the decoder
