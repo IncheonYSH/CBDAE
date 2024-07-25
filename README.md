@@ -26,7 +26,9 @@ Therefore, it is necessary to recover accurate observations by analyzing corrupt
 
 The main idea behind CBDAE (Contrastive Blind Denoising Autoencoder) is to introduce **contrast loss** into time series data.
 
-![loss_function](README/loss_function.PNG)
+```math
+L=L_{AE}+\beta L_{NCE}
+```
 
 The purpose of this project is to implement the CBDAE introduced in the paper and enable experimentation on a variety of datasets.
 
